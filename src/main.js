@@ -1,5 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron')
 const path = require('path')
+const IPC = require('./ipc.js')
 
 
 if (require('electron-squirrel-startup')) {
@@ -23,15 +24,7 @@ const createWindow = () => {
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
 
-
-  ipcMain.handle('dialog:openFile', async () => {
-    return 'opening file <test>'
-  })
-
-  ipcMain.handle('dialog:ghibbet', async () => {
-    
-    return 'ghibbeting <test>'
-  })
+  IPC()
 }
 
 
