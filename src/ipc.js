@@ -11,4 +11,11 @@ module.exports = function() {
     
     return 'ghibbeting <test>'
   })
+  
+  
+  ipcMain.handle('serialport:list', async () => {
+    const SerialPort = require('serialport')
+    const result = SerialPort.list()
+    return result
+  })
 }

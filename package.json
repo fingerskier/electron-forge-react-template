@@ -2,7 +2,7 @@
   "name": "blahtemp",
   "productName": "blahtemp",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "An Electron/React application template",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
@@ -37,6 +37,7 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "serialport": "^12.0.0"
   }
 }
